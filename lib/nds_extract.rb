@@ -20,9 +20,11 @@ def directors_totals(nds)
   #
   #
   # Be sure to return the result at the end!
-  total = 0
+
   counter = 0
   while counter < nds.length do
+    # reset total for each director
+    total = 0
     # get movies
     movies = nds[counter][:movies]
     # movie array - get all totals and sum
@@ -31,7 +33,8 @@ def directors_totals(nds)
       total += movies[counter][:worldwide_gross]
       movie_counter += 1
     end
-
+    result[nds[counter]] = total
+    counter += 1
   end
 
 
