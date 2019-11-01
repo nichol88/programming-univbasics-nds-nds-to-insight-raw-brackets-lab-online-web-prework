@@ -7,7 +7,7 @@ def directors_totals(nds)
   #
   #
   # The Hash result be full of things like "Jean-Pierre Jeunet" => "222312123123"
-  pp(nds)
+
 
   result = {
   }
@@ -20,5 +20,20 @@ def directors_totals(nds)
   #
   #
   # Be sure to return the result at the end!
-  
+  total = 0
+  counter = 0
+  while counter < nds.length do
+    # get movies
+    movies = nds[counter][:movies]
+    # movie array - get all totals and sum
+    movie_counter = 0
+    while movie_counter < movies.length do
+      total += movies[counter][:worldwide_gross]
+      movie_counter += 1
+    end
+
+  end
+
+
+
 end
