@@ -37,6 +37,6 @@ def directors_totals(nds)
     counter += 1
   end
 
-
+result
 
 end
