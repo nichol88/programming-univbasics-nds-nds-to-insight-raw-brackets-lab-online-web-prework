@@ -30,7 +30,7 @@ def directors_totals(nds)
     # movie array - get all totals and sum
     movie_counter = 0
     while movie_counter < movies.length do
-      total += movies[counter][:worldwide_gross]
+      total = total + movies[counter][:worldwide_gross].to_i
       movie_counter += 1
     end
     result[nds[counter][:name]] = total
